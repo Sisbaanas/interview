@@ -1,0 +1,114 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #F5F5F5;
+    margin: 0;
+}
+
+.login {
+    background: #FFFFFF;
+    border: 1px solid #D4DFEA;
+    border-radius: 10px;
+    width: 373px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+.description {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.006em;
+    color: #6E7C87;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.email {
+    background: #FFFFFF;
+    border: 1px solid #D4DFEA;
+    border-radius: 5px;
+    padding: 15px 10px;
+    width: calc(100% - 40px);
+    outline: none;
+}
+
+.password {
+    background: #FFFFFF;
+    border: 1px solid #D4DFEA;
+    border-radius: 5px;
+    padding: 15px 10px;
+    width: calc(100% - 40px);
+    margin-top: 12px;
+    outline: none;
+}
+
+.connect {
+    background: #EC1540;
+    border-radius: 5px;
+
+    margin: 20px 10px 0;
+    outline: none;
+    border: none;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+
+.div-1 {
+    margin-top: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.question {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6E7C87;
+}
+
+.signup {
+    margin-left: 5px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #EC1540;
+    cursor: pointer;
+}

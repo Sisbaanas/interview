@@ -1,0 +1,107 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #F5F5F5;
+    margin: 0;
+}
+
+
+
+.signup {
+    background: #FFFFFF;
+    border: 1px solid #D4DFEA;
+    border-radius: 10px;
+
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    padding: 20px;
+}
+
+
+.title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+
+
+.div-1 {
+    display: flex;
+}
+
+
+.input-container {
+    background: #FFFFFF;
+    border: 1px solid #D4DFEA;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+input {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: -webkit-fill-available;
+}
+
+
+.account {
+    margin-top: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.question {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6E7C87;
+}
+
+.create {
+    margin-left: 5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #EC1540;
+    cursor: pointer;
+}
+
+
+.connect {
+    background: #EC1540;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: #EC1540;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}

@@ -1,0 +1,45 @@
+<div class="container">
+    <form class="signup" [formGroup]="signUpForm">
+
+        <p class="title">Sign up</p>
+        <div class="div-1">
+            <div>
+                <div class="input-container">
+                    <input type="text" formControlName="firstName" placeholder="First Name">
+                </div>
+                <div *ngIf="!signUpForm.value.firstName && (submitted)">Required</div>
+            </div>
+            <div>
+                <div class="input-container">
+                    <input type="text" formControlName="lastName" placeholder="Last Name">
+                </div>
+                <div *ngIf="!signUpForm.value.lastName && (submitted)">Required</div>
+            </div>
+
+        </div>
+        <div class="input-container">
+            <input type="text" formControlName="email" placeholder="Email Address">
+        </div>
+        <div class="input-container">
+            <input type="text" formControlName="password" placeholder="Create Password “at least 6 characters”"
+                type="password">
+        </div>
+        <div class="input-container">
+            <input type="text" formControlName="password2" placeholder="Create Password “at least 6 characters”"
+                type="password">
+        </div>
+        <div *ngIf="!passwordMatch">Passwords don't match</div>
+
+        <div class="account">
+            <span class="question">I already have an account</span>
+            <span (click)="navigateToLogin()" class="create">Log in Instead?</span>
+        </div>
+
+        <div class="connect" (click)="signUp(signUpForm)">
+            <button>
+                Sign up
+            </button>
+        </div>
+    </form>
+
+</div>

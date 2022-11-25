@@ -1,0 +1,18 @@
+<div class="container">
+    <form class="login" [formGroup]="loginForm" >
+        <p class="title">Log in</p>
+        <p class="description">Enter your Email and Password to log in</p>
+        <div class="input">
+            <input type="text" formControlName="email" class="email" placeholder="Email">
+            <input formControlName="password" class="password" placeholder="Password" type="password">
+        </div>
+        <div class="div-1">
+            <span class="question">You Don’t Have an account?</span>
+            <span (click)="goToSignUp()" class="signup">Create one!</span>
+        </div>
+        <button class="connect" (click)="Login(loginForm)">
+            Connect
+        </button>
+    </form>
+</div>
+
