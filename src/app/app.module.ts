@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DragDirective } from './dragDrop.directive';
 import { AuthGuard } from './Services/config/AuthGuard';
 import { TokenInterceptor } from './Services/config/HttpInterceptor';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,6 @@ import { TokenInterceptor } from './Services/config/HttpInterceptor';
     multi: true
   },
     AuthGuard],
-      bootstrap: [AppComponent]
+      bootstrap: [AppComponent],
 })
 export class AppModule { }

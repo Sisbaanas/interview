@@ -9,8 +9,9 @@
         <div class="chartContainer">
             <app-pie-chart *ngIf="chartData"  [data]="chartData"></app-pie-chart>
         </div>
+        <div class="chartContainer">
+            <app-random-chart *ngIf="chartData" [data]="chartData"></app-random-chart>
+        </div>
     </div>
-    <div class="chartContainer">
-        <app-random-chart *ngIf="chartData" [data]="chartData"></app-random-chart>
-    </div>
+   
 </div>

@@ -1,5 +1,30 @@
 <div class="container">
-    <div class="elem" (click)="goDashboard()">Dashboard</div>
-    <div class="elem" (click)="goData()">Data</div>
-    <div class="elem" (click)="goUpload()">Upload</div>
+    <div class="img">
+        <img src="https://indatacore.com/wp-content/uploads/2020/02/IndatacoreIdentity.png" alt="">
+    </div>
+    <div class="elem" (click)="goDashboard()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path
+                d="M25.5 19.5V6H42v13.5ZM6 25.5V6h16.5v19.5ZM25.5 42V22.5H42V42ZM6 42V28.5h16.5V42Zm3-19.5h10.5V9H9ZM28.5 39H39V25.5H28.5Zm0-22.5H39V9H28.5ZM9 39h10.5v-7.5H9Zm10.5-16.5Zm9-6Zm0 9Zm-9 6Z" />
+        </svg>
+        Dashboard
+    </div>
+    <div class="elem" (click)="goData()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path
+                d="M6 42v-3.8l3-3V42Zm8.25 0V30.2l3-3V42Zm8.25 0V27.2l3 3.05V42Zm8.25 0V30.25l3-3V42ZM39 42V22.2l3-3V42ZM6 30.2v-4.25l14-13.9 8 8L42 6v4.25L28 24.3l-8-8Z" />
+        </svg>Data
+    </div>
+    <div class="elem" (click)="goUpload()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path
+                d="M22.6 37.9h3V27.85l4.1 4.1 2.1-2.1-7.8-7.6-7.7 7.7 2.1 2.1 4.2-4.2ZM11 44q-1.2 0-2.1-.9Q8 42.2 8 41V7q0-1.2.9-2.1Q9.8 4 11 4h18.05L40 14.95V41q0 1.2-.9 2.1-.9.9-2.1.9Zm16.55-27.7V7H11v34h26V16.3ZM11 7v9.3V7v34V7Z" />
+        </svg>Upload
+    </div>
+    <div class="elem logout" (click)="logout()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path
+                d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h14.55v3H9v30h14.55v3Zm24.3-9.25-2.15-2.15 5.1-5.1h-17.5v-3h17.4l-5.1-5.1 2.15-2.15 8.8 8.8Z" />
+        </svg>Logout
+    </div>
 </div>

@@ -27,4 +27,9 @@ export class SideBarComponent implements OnInit {
   {
     this.router.navigateByUrl('/user/upload');
   }
+
+  logout()
+  {
+    this.router.navigateByUrl('/auth/login');
+  }
 }

@@ -1,0 +1,83 @@
+.shadow {
+    background-color: gray;
+    opacity: 0.8;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.popup-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div{
+        font-size: 15px; 
+    }
+}
+
+.input {
+    margin-left: 10px;
+    padding: 12px 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 250px;
+    border: 1px solid #C8CFDC;
+
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 0 10px;
+    div {
+        flex: 1;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px 0;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 8px;
+
+    }
+}
+
+.cancel {
+    border: 1px solid #C8CFDC;
+    color: #53627E;
+}
+
+.confirm {
+
+    background: #212529;
+    color: #FFFFFF;
+
+}

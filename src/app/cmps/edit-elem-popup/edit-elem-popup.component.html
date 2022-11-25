@@ -1,0 +1,34 @@
+<div class="shadow"  >
+</div>
+
+<form class="popup-container" [formGroup]="Form"  (click)="closePopup($event)">
+    <div class="pop-up" >
+        <p>Edit element</p>
+        <div class="row">
+            <div>Name :</div>
+            <input class="input" formControlName="name">
+        </div>
+        <div class="row">
+            <div>Price :</div>
+            <input class="input" type="number" formControlName="value">
+        </div>
+        <div class="row">
+            <div>Country :</div>
+            <input class="input" formControlName="country">
+        </div>
+        <div class="row">
+            <div>City :</div>
+            <input class="input" formControlName="city">
+        </div>
+
+        <div class="btns">
+            <div class="cancel" (click)="cancel()">
+              Cancel
+            </div>
+            <div class="confirm" (click)="save(Form)">
+              Save
+            </div>
+          </div>
+
+    </div>
+</form>

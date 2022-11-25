@@ -1,1 +1,23 @@
-<p>upload works!</p>
+<div class="wrapper">
+    <div class="container">
+        <div class="text">
+            <p>Import File</p>
+        </div>
+       <div class="upload-wrapper" appDrag (files)="onFileDragged($event)">
+            <input type='file' accept="image/*"  (change)="onFileChanged($event)" #file hidden />
+            <div class="drag-placeholder"  >
+                <img src="/assets/cloud.svg" alt="">
+                <p>Drag & drop your files here</p>
+            </div>
+            <div class="seperator">
+                Or
+            </div>
+            <div class="upload-btn" (click)="file.click()">
+                Upload file !
+            </div>
+       </div>
+    </div>
+    <div class="progress" *ngIf="loading" >
+         <div class="progress-bar"  [style.width.%]="width"></div>
+    </div>
+</div>

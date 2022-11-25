@@ -1,0 +1,78 @@
+<div class="main-div">
+
+
+  <div class="top-div">
+
+    <div class="search-div">
+      <img class="search-icon" src="/assets/Search.svg" />
+      <input placeholder="{{placeholder}}" [(ngModel)]="searchTerm" (keyup.enter)="onTermChange($event)"
+        class="search-input">
+    </div>
+
+  </div>
+
+  <div class="middle-div" id="style-2">
+
+    <table class="table-div" cellspacing="0" style="border-collapse: separate;">
+
+      <thead class="thead">
+        <ng-container *ngFor="let elem of headerCells let first = first;">
+          <th class="th-elm" style="text-align: center;">
+            <span>
+              {{elem?.label}}
+            </span>
+          </th>
+        </ng-container>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let row of table?.list ">
+          <td>
+            {{row?.name}}
+          </td>
+          <td>
+            {{row?.value}}
+          </td>
+          <td>
+            {{row?.country}}
+          </td>
+          <td>
+            {{row?.city}}
+          </td>
+          <td >
+            <div class="action-wrapper">
+              <img class="action_icon" (click)="edit(row?.id)" src="/assets/edit_icon.svg" />
+              <img class="action_icon"  (click)="delete(row?.id)" src="/assets/delete_icon.svg" />
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="bottom-div">
+    <div class="page-size-div">
+      <div class="select-div">
+        <select class="select-elm" (change)="onPageSizeChange($event)">
+          <option *ngFor="let page of pageSizes">
+            {{page}}
+          </option>
+        </select>
+      </div>
+      <span class="footer-left-side-text"> 1 - {{ pageSize }} de {{ table?.totalElements }}</span>
+    </div>
+
+    <div class="page-number-div">
+      <a class="page-number-div-a" (click)="previousPage()">&laquo;</a>
+      <ng-container *ngFor="let i of pages">
+        <span (click)="changePage(i)"
+          [ngStyle]="(i == (table?.pageNumber + 1)) ? {'background-color': '#EC1540', 'color': 'white'} : {}"
+          class="page-number-div-a">{{i}}</span>
+      </ng-container>
+      <a class="page-number-div-a" (click)="nextPage()">&raquo;</a>
+    </div>
+  </div>
+
+</div>

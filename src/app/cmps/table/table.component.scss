@@ -1,0 +1,287 @@
+$border-color: #E8E9EB;
+;
+
+* {
+  font-family: 'Manrope';
+  font-style: normal;
+
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+
+}
+
+.main-div {
+  width: auto;
+  height: 100%;
+  padding: 20px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.top-div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-div {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-right: 20px;
+  background-color: #F7F8FA;
+  border-radius: 5px;
+  padding: 5px;
+  border: 0.5px solid rgba(165, 174, 187, 0.3);
+}
+
+.search-icon {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
+.action_icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  &:first-child{
+    position: relative;
+    top:-2px;
+  }
+  cursor: pointer;
+}
+
+.action-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding-left: 15px;
+  background-color: #F7F8FA;
+  text-align: left;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+
+.middle-div {
+
+  display: block;
+  overflow: auto;
+  height: 400px;
+}
+
+
+#style-2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, .3);
+  background-color: rgba(174, 6, 6, 0.1);
+}
+
+
+.table-div {
+  width: 100%;
+  padding-top: 10px;
+
+  th {
+    vertical-align: middle;
+    border-bottom: 1px solid #E8E9EB;
+  }
+
+  td {
+    vertical-align: middle;
+    border-bottom: 1px solid #E8E9EB;
+  }
+}
+
+.th-elm {
+  padding-bottom: 14px;
+  margin: 0px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #A5AEBB;
+  text-align: left;
+}
+
+tr {
+  height: 70px;
+}
+
+.bottom-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid $border-color;
+  padding-top: 25px;
+}
+
+.thead {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+.page-size-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.select-div {
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid $border-color;
+  max-height: 35px;
+  background-color: #F7F8FA;
+  ;
+}
+
+.select-elm {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.footer-left-side-text {
+  padding: 6px;
+  margin-left: 14px;
+  color: #A5AEBB;
+}
+
+.page-number-div {
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.page-number-div-a {
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: pointer;
+  display: flex;
+  background-color: #F7F8FA;
+
+}
+
+
+td {
+  vertical-align: middle;
+
+
+}
+
+
+.approve-div img {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width:600px) {
+  .top-div {
+    flex-direction: column;
+  }
+
+  .bottom-div {
+    flex-direction: column;
+  }
+
+  .page-number-div {
+    margin-top: 10px;
+  }
+}
+
+
+
+td {
+  white-space: nowrap;
+
+}
+
+
+.select {
+  outline: none;
+  border: none;
+
+
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #6E7C87;
+  width: 120px;
+}
+
+.status-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.col2 {
+  background: #FFFFFF;
+  border: 0.5px solid #D4DFEA;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0px 10px;
+
+
+
+}
+
+::ng-deep .mat-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button {
+  padding: 0;
+  width: 115px;
+  height: 46px;
+
+}

@@ -1,0 +1,11 @@
+
+<div class="table-wrapper">
+    <app-table class="table" [table]="table" [headerCells]="headerCells" (response)="handleResponse($event)"
+        [placeholder]="'rechercher par label'"></app-table>
+</div>
+
+
+<app-edit-elem-popup *ngIf="popupOpen" [id]="id" [data]="data" (response)="handleResponse($event)"></app-edit-elem-popup>
+
+
+<app-loader *ngIf="loading"></app-loader>
