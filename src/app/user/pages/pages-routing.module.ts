@@ -14,7 +14,7 @@ const routes: Routes = [
     component: DataComponent,
   },
   {
-    path: 'investment',
+    path: 'upload',
     component: UploadComponent,
   },
  

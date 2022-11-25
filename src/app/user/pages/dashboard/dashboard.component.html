@@ -1,1 +1,16 @@
-<p>dashboard works!</p>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="chartContainer">
+            <app-bar-chart *ngIf="chartData"  [data]="chartData"></app-bar-chart>
+        </div>
+        <div class="chartContainer">
+            <app-pie-chart *ngIf="chartData"  [data]="chartData"></app-pie-chart>
+        </div>
+    </div>
+    <div class="chartContainer">
+        <app-random-chart *ngIf="chartData" [data]="chartData"></app-random-chart>
+    </div>
+</div>

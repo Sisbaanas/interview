@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataComponent } from './data/data.component';
 import { UploadComponent } from './upload/upload.component';
+import { CmpsModule } from 'src/app/cmps/cmps.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UploadComponent } from './upload/upload.component';
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    CmpsModule
   ]
 })
 export class PagesModule { }

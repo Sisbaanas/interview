@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background: #F5F5F5;
+    margin: 0;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.chartContainer{
+    padding: 20px;
+    border: 1px solid rgb(191, 183, 183);
+    margin: 20px;
+    border-radius: 20px;
+    background-color: white;
+}

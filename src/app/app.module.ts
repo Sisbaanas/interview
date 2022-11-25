@@ -14,7 +14,7 @@ import { TokenInterceptor } from './Services/config/HttpInterceptor';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
