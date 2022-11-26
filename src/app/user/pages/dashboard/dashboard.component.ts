@@ -23,8 +23,6 @@ export class DashboardComponent implements OnInit {
     this.userService.getChart().subscribe(
       (response: any) => {
         this.chartData = response;
-        console.log(response);
-        
       },
       (error: any) => {
         console.log(error?.error?.messageError);

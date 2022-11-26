@@ -1,5 +1,6 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { catchError, Observable, throwError } from "rxjs";
 import { environment } from "src/environments/environment";
 
 @Injectable({
@@ -21,8 +22,6 @@ export class HttpService {
   public postWithToken(endPoint: string, body: any,token:string) {
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Authorization', token);
-    console.log(token);
-
     return this.http.post(this.apiBaseServer + endPoint, body , { headers });
   }
 
@@ -41,4 +40,28 @@ export class HttpService {
   public delete(endPoint: string) {
     return this.http.delete(this.apiBaseServer + endPoint);
   }
+
+  uploadFile(endPoint: string, formData: FormData): Observable<any> {
+    return this.http
+      .post(this.apiBaseServer + endPoint, formData, {
+        reportProgress: true,
+        observe: 'events',
+      })
+      .pipe(catchError(this.errorMgmt));
+  }
+  errorMgmt(error: HttpErrorResponse) {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      // Get client-side error
+      errorMessage = error.error.message;
+    } else {
+      // Get server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    console.log(errorMessage);
+    return throwError(() => {
+      return errorMessage;
+    });
+  }
+
 }

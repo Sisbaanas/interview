@@ -22,7 +22,7 @@ export class BarChartComponent implements OnInit {
         datasets: [
           {
             label: "# prix",
-            data: this.data?.datasets[0]?.data,
+            data: this.data?.data,
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(255, 159, 64, 0.2)',

@@ -1,4 +1,6 @@
+import { HttpEvent, HttpEventType } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { UserService } from 'src/app/Services/UserService';
 
 @Component({
   selector: 'app-upload',
@@ -10,15 +12,15 @@ export class UploadComponent implements OnInit {
 
   uploaded = false;
   imageLink = "";
-  loading=false;
-  width = 20;
+  loading = false;
+  progress: number = 0;
 
-  constructor() {
+  constructor(private userSerivce: UserService) {
   }
 
   ngOnInit(): void {
 
-    setInterval(() => { if (this.width < 100) this.width += 5 }, 100)
+    //setInterval(() => { if (this.width < 100) this.width += 5 }, 100)
 
   }
 
@@ -36,12 +38,7 @@ export class UploadComponent implements OnInit {
 
     if (files.length > 0) {
       let file: File = files[0];
-      if (file.size > 500000) {
-        this.openError("Maximum upload size of 0.1mb exceeded");
-      }
-      else {
-        this.uploadImage(file);
-      }
+      this.uploadImage(file);
     }
   }
 
@@ -55,21 +52,31 @@ export class UploadComponent implements OnInit {
 
     if (files.length > 0) {
       let file: any = files[0];
-      if (file.size > 500000) {
-        this.openError("Maximum upload size of 0.1mb exceeded");
-      }
-      else {
-        this.uploadImage(file.file);
-      }
+      this.uploadImage(file.file);
     }
   }
 
   uploadImage(file: any) {
-
-  }
-
-  openError(messageError: string) {
-
+    this.loading = true
+    this.userSerivce.uploadFile(file).subscribe((event: HttpEvent<any>) => {
+      switch (event.type) {
+        case HttpEventType.Sent:
+          console.log('Request has been made!');
+          break;
+        case HttpEventType.ResponseHeader:
+          console.log('Response header has been received!');
+          break;
+        case HttpEventType.UploadProgress:
+          this.progress = Math.round(event.loaded / Number(event?.total) * 100);
+          console.log(`Uploaded! ${this.progress}%`);
+          break;
+        case HttpEventType.Response:
+          console.log('User successfully created!', event.body);
+          setTimeout(() => {
+            this.progress = 0;
+          }, 1500);
+      }
+    });
   }
 
   removeImage() {

@@ -21,7 +21,7 @@ export class PieChartComponent implements OnInit {
         datasets: [
           {
             label: "#prix",
-            data: this.data?.datasets[0]?.data,
+            data: this.data?.data,
             backgroundColor: [
               'rgba(255, 205, 86, 0.5)',
               'rgba(75, 192, 192, 0.5)',

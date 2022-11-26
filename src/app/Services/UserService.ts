@@ -1,3 +1,4 @@
+import { HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { HttpService } from "./config/HttpService";
 
@@ -5,7 +6,7 @@ import { HttpService } from "./config/HttpService";
     providedIn: 'root',
 })
 export class UserService {
-  
+
 
 
 
@@ -25,6 +26,15 @@ export class UserService {
     }
 
     updateElem(id: string, req: any) {
-        return this.http.patch('/user/testObject/' + id,req).pipe();
-      }
+        return this.http.patch('/user/testObject/' + id, req).pipe();
+    }
+
+
+
+    public uploadFile(file: File) {
+        const formData = new FormData()
+        formData.append('file', file)
+        return this.http.uploadFile('/user/upload', formData);
+    }
+
 }

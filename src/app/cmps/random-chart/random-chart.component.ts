@@ -15,7 +15,21 @@ export class RandomChartComponent implements OnInit {
   ngOnInit() {
     this.chart = new Chart("canvasRandom", {
       type: "line",
-      data: this.data
+      data: {
+        labels: this.data?.labels,
+        datasets: [
+          {
+            label: "#prix",
+            data: this.data?.data,
+            backgroundColor: [
+              'rgba(255, 205, 86, 0.5)',
+              'rgba(75, 192, 192, 0.5)',
+              'rgba(54, 162, 235, 0.5)',
+              'rgba(153, 102, 255, 0.5)',
+            ],
+          }
+        ]
+      }
     });
   }
 }
