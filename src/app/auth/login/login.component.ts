@@ -14,18 +14,17 @@ export class LoginComponent implements OnInit {
   loginForm = this.fb.group({
     email: ['', Validators.required],
     password: ['', Validators.required,],
-    source:['CUSTOMER']
+    source: ['CUSTOMER']
   });
 
   constructor(private router: Router,
-              private fb: FormBuilder,
-              private authService:AuthService) { }
+    private fb: FormBuilder,
+    private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  Login(e:any)
-  {
+  Login(e: any) {
     this.authService.Login(e.value).subscribe(
       (response: any) => {
         localStorage.setItem("Authorization", response?.token)
@@ -37,8 +36,7 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  goToSignUp()
-  {
+  goToSignUp() {
     this.router.navigate(['/auth/signup']);
   }
 

@@ -14,6 +14,7 @@ export class UploadComponent implements OnInit {
   imageLink = "";
   loading = false;
   progress: number = 0;
+  fileUploaded=false;
 
   constructor(private userSerivce: UserService) {
   }
@@ -58,6 +59,7 @@ export class UploadComponent implements OnInit {
 
   uploadImage(file: any) {
     this.loading = true
+    this.fileUploaded = false;
     this.userSerivce.uploadFile(file).subscribe((event: HttpEvent<any>) => {
       switch (event.type) {
         case HttpEventType.Sent:
@@ -71,10 +73,10 @@ export class UploadComponent implements OnInit {
           console.log(`Uploaded! ${this.progress}%`);
           break;
         case HttpEventType.Response:
-          console.log('User successfully created!', event.body);
-          setTimeout(() => {
-            this.progress = 0;
-          }, 1500);
+          console.log('File successfully uploaded!', event.body);
+          this.fileUploaded = true;
+          this.loading = false;
+         
       }
     });
   }

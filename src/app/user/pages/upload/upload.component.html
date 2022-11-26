@@ -1,16 +1,16 @@
 <div class="wrapper">
     <div class="container">
         <div class="text">
-            <p>Import File</p>
+            <p>Importer fichier</p>
         </div>
        <div class="upload-wrapper" appDrag (files)="onFileDragged($event)">
             <input type='file' accept="image/*"  (change)="onFileChanged($event)" #file hidden />
             <div class="drag-placeholder"  >
                 <img src="/assets/cloud.svg" alt="">
-                <p>Drag & drop your files here</p>
+                <p>Faites glisser et déposez vos fichiers ici</p>
             </div>
             <div class="seperator">
-                Or
+                ou
             </div>
             <div class="upload-btn" (click)="file.click()">
                 Upload file !
@@ -20,4 +20,9 @@
     <div class="progress" *ngIf="loading" >
          <div class="progress-bar"  [style.width.%]="progress"></div>
     </div>
+
+    <div *ngIf="fileUploaded" class="message">
+        Fichier bien téléchargé !
+    </div>
+
 </div>

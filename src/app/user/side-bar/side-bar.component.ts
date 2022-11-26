@@ -31,5 +31,6 @@ export class SideBarComponent implements OnInit {
   logout()
   {
     this.router.navigateByUrl('/auth/login');
+    localStorage.removeItem("Authorization")
   }
 }
